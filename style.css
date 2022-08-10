@@ -733,3 +733,148 @@ body {
     text-align: center;
   }
 }
+
+/* .................footer..................... */
+.footer {
+  background-color: #3f3b3d;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 133%;
+}
+
+.footer-conteiner {
+  padding: 90px 15px 30px 15px;
+}
+
+.footer-headering {
+  font-size: 29px;
+  line-height: 110%;
+  text-transform: uppercase;
+  padding-bottom: 32px;
+}
+.footer-body {
+}
+.footer-galery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-img {
+  max-width: 100%;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  padding-top: 66px;
+}
+.footer-nav-col {
+}
+.footer-nav-col-1 {
+}
+.column-1-text {
+  /* font-size: 24px; */
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1440 -320)));
+  line-height: 131%;
+}
+.column-1-line {
+  height: 2px;
+  /* width: 512px; */
+  width: calc(200px + (512 - 200) * ((100vw - 320px) / (1440 -320)));
+  background-color: #fff;
+  margin-top: 67px;
+}
+.footer-col-name {
+  padding-bottom: 15px;
+}
+
+.footer-nav-link {
+  padding-bottom: 3px;
+}
+.footer-nav-link:hover {
+  color: #f14814;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 49px;
+}
+
+.copyright-text {
+  white-space: nowrap;
+  font-size: calc(11px + (16 - 11) * ((100vw - 320px) / (1440 -320)));
+}
+.orangre {
+  color: #f14814;
+  padding-left: 10px;
+}
+.copyright-button {
+  padding: 9px 12px;
+  background-color: #f14814;
+  border-radius: 3px;
+  margin-right: 190px;
+  white-space: nowrap;
+}
+
+.copyright-button:hover {
+  background-color: #dddbda;
+  color: #3f3b3d;
+  transition: all 0.3s;
+}
+.cop-button-link {
+}
+@media (max-width: 760px) {
+  .footer-conteiner {
+    padding: 50px 15px 30px 15px;
+  }
+  .footer-headering {
+    font-size: 24px;
+  }
+
+  .footer-nav-link {
+    padding-bottom: 9px;
+    font-size: 13px;
+  }
+
+  .footer-nav {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer-nav-col-1 {
+    grid-column: 1/4;
+  }
+
+  .column-1-line {
+    margin: 20px 0px;
+    width: 340px;
+  }
+
+  .footer-galery {
+    gap: 10px;
+  }
+
+  .footer-nav {
+    padding-top: 30px;
+  }
+
+  .copyright-button {
+    margin-right: 70px;
+  }
+}
+
+@media (max-width: 425px) {
+  .footer-copyright {
+    padding-top: 29px;
+  }
+  .orangre {
+    padding-left: 0px;
+  }
+
+  .copyright-button {
+    margin-right: 0px;
+  }
+}
