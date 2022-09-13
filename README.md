@@ -1,4 +1,7 @@
 # pulstar
+[link to pulstar](https://ognivushka.github.io/pulstar/)
+
+
 how its looks like:
 
 ![web](https://user-images.githubusercontent.com/108069895/187082626-d4e03d05-355e-4a29-9f6d-c3941977f525.PNG)
