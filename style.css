@@ -127,11 +127,49 @@ body {
   white-space: nowrap;
   border-radius: 3px;
   cursor: pointer;
+  position: relative;
 }
 
-.buttons-icons:hover {
-  background-color: #f14814;
+/* .buttons-icons:hover img{
+  display: none;
+} */
+
+
+.buttons-icons:hover #shoping-list{
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: #f8f9fa;
+  padding: 20px;
+  min-height: 400px;
+  min-width: 300px;
   transition: all 0.3s;
+}
+
+#shoping-list {
+  display: none; 
+}
+.shop-content {
+  font-size: 18px;
+  font-weight: 300;
+  width: 100%;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.clear-cart{
+  padding: 20px;
+  text-align: center;
+  border: 1px solid gray;
 }
 
 @media (max-width: 760px) {
