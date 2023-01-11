@@ -15,7 +15,7 @@ btnNavEl.addEventListener("click", function () {
 const products = document.querySelector('.shop-products'), //add products to DOM
 shopingCartContent = document.querySelector('.shop-content tbody'),
 clearCartBtn = document.querySelector('.clear-cart'),
-productName = document.querySelector('.product-name')
+productName = document.querySelector('.product-name');
 
 
 
@@ -24,6 +24,8 @@ loadEventListeners()
 function loadEventListeners(){
   products.addEventListener('click', buyProduct)
   shopingCartContent.addEventListener('click', removeProduct)
+  clearCartBtn.addEventListener('click', clearBtn)
+  document.addEventListener('DOMContentLoaded', getFromLS)
 }
 
 
@@ -88,4 +90,42 @@ function loadEventListeners(){
       product = e.target.parentElement.parentElement;
       productId = product.querySelector('a').getAttribute('data-id')
     }
+    removeProductFromLS(productId)
+  }
+
+  function removeProductFromLS(id){
+    let productsLS = getProductsFromStorage();
+    productsLS.forEach(function(productLS, index){
+      if(productLS.id === id){
+        productsLS.splice(index,1)
+      }
+    })
+    localStorage.setItem('products', JSON.stringify(productsLS))
+  }
+
+  function clearBtn(){
+    while(shopingCartContent.firstChild){
+      shopingCartContent.removeChild(shopingCartContent.firstChild)
+    }
+    clearLS()
+  }
+
+  function clearLS(){
+    localStorage.clear()
+  }
+
+  function getFromLS(){
+    let productsLS = getProductsFromStorage();
+    productsLS.foEach(function(product){
+      const row = document.createElement('tr');
+      row.innerHTML = `
+         <tr>
+             <td>${product.title}</td>
+             <td>${product.price}</td>
+         <td>
+             <a href='#' class="remove" data-id="${product.id}">X</a>
+         </td>
+      `;
+      shopingCartContent.appendChild(row)
+    })
   }
