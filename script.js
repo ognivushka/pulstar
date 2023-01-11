@@ -23,6 +23,7 @@ productName = document.querySelector('.product-name')
 loadEventListeners()
 function loadEventListeners(){
   products.addEventListener('click', buyProduct)
+  shopingCartContent.addEventListener('click', removeProduct)
 }
 
 
@@ -61,4 +62,30 @@ function loadEventListeners(){
         </td>
     `;
     shopingCartContent.appendChild(row)
+    saveIntoStorage(product)
+  }
+
+  function saveIntoStorage(product){
+    let products= getProductsFromStorage();
+    products.push(product);
+    localStorage.setItem('products', JSON.stringify(products))
+  }
+
+  function getProductsFromStorage(){
+    let products;
+    if(localStorage.getItem('products')===null){
+      products=[]
+    }else{
+      products = JSON.parse(localStorage.getItem('products'))
+    }
+    return products
+  }
+
+  function removeProduct(e){
+    let product, productId;
+    if(e.target.classList.contains('remove')){
+      e.target.parentElement.parentElement.remove();
+      product = e.target.parentElement.parentElement;
+      productId = product.querySelector('a').getAttribute('data-id')
+    }
   }
