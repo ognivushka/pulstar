@@ -62,6 +62,7 @@ function loadEventListeners(){
         <td>
             <a href='#' class="remove" data-id="${product.id}">X</a>
         </td>
+      </tr>
     `;
     shopingCartContent.appendChild(row)
     saveIntoStorage(product)
@@ -116,16 +117,17 @@ function loadEventListeners(){
 
   function getFromLS(){
     let productsLS = getProductsFromStorage();
-    productsLS.foEach(function(product){
+    productsLS.forEach(function(product){
       const row = document.createElement('tr');
       row.innerHTML = `
          <tr>
              <td>${product.title}</td>
              <td>${product.price}</td>
-         <td>
+             <td>
              <a href='#' class="remove" data-id="${product.id}">X</a>
-         </td>
+             </td>
+         </tr>
       `;
-      shopingCartContent.appendChild(row)
+    shopingCartContent.appendChild(row)
     })
   }
