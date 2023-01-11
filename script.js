@@ -12,10 +12,9 @@ btnNavEl.addEventListener("click", function () {
 //SHOPING-LIST
 
               //variables
-const products = document.querySelector('.shop-products'), //add products to DOM
+const products = document.querySelector('.shop-products'), 
 shopingCartContent = document.querySelector('.shop-content tbody'),
 clearCartBtn = document.querySelector('.clear-cart')
-
 
                //event listners
 loadEventListeners()
@@ -40,7 +39,6 @@ function loadEventListeners(){
 
   function getProductInfo(product){
     const productInfo ={
-      image: product.querySelector('img'),
       title: product.querySelector('.product-name').textContent,
       price: product.querySelector('.product-price').textContent,
       id: product.querySelector('div').getAttribute('data-id'),
@@ -127,4 +125,3 @@ function loadEventListeners(){
     })
   }
 
- 
