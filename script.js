@@ -15,7 +15,7 @@ btnNavEl.addEventListener("click", function () {
 const products = document.querySelector('.shop-products'), //add products to DOM
 shopingCartContent = document.querySelector('.shop-content tbody'),
 clearCartBtn = document.querySelector('.clear-cart'),
-productName = document.querySelector('.product-name');
+
 
 
 
@@ -26,6 +26,7 @@ function loadEventListeners(){
   shopingCartContent.addEventListener('click', removeProduct)
   clearCartBtn.addEventListener('click', clearBtn)
   document.addEventListener('DOMContentLoaded', getFromLS)
+
 }
 
 
@@ -131,3 +132,5 @@ function loadEventListeners(){
     shopingCartContent.appendChild(row)
     })
   }
+
+ 
