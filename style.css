@@ -468,6 +468,14 @@ th, td {
   height: calc(200px + (431 - 200) * ((100vw - 320px) / (1440 -320)));
 }
 
+.for-shoping-list{
+  display: none;
+}
+
+.shoping-list.for-shping-list{
+  display: block;
+}
+
 .product-exp {
   display: flex;
   margin: 22px;
