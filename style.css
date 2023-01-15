@@ -273,7 +273,7 @@ th, td {
 }
 .hero-conteiner {
   display: flex;
-  /* align-items: stretch; */
+  align-items: flex-end;
 }
 .hero-info {
   background-color: #3f3b3d;
@@ -329,13 +329,14 @@ th, td {
 }
 
 .slide {
-  /* position: absolute; */
-  /* inset: 0; */
   display: none;
+  transition: 0.3s;
+
 }
 
 .slide[data-active]{
   display: block;
+ 
 }
 
 .hero-img {
