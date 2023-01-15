@@ -185,6 +185,18 @@ th, td {
   .button-buy {
     display: none;
   }
+  .buttons-icons:hover #shoping-list{
+    min-height: 400px;
+     min-width: 100px;
+   }
+   .shop-content {
+    font-size: 11px;
+  }
+
+  .header-conteiner{
+    justify-content: end;
+    gap: 5px;
+  }
 }
 
 /* .....................mobile-navigation.................. */
@@ -261,11 +273,12 @@ th, td {
 }
 .hero-conteiner {
   display: flex;
-  align-items: flex-end;
+  /* align-items: stretch; */
 }
 .hero-info {
   background-color: #3f3b3d;
   padding: 260px 64px 64px 64px;
+ 
 }
 .hero-heading {
   /* font-size: 33px; */
@@ -309,19 +322,64 @@ th, td {
   max-height: 500px;
   min-width:300px;
   overflow: hidden;
+  position: relative;
+}
+
+.hero-fotos {
+}
+
+.slide {
+  /* position: absolute; */
+  /* inset: 0; */
+  display: none;
+}
+
+.slide[data-active]{
+  display: block;
 }
 
 .hero-img {
   width: 100%;
   height:100%;
+  object-fit: cover;
 }
 
+.galery-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.664);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
 
+.galery-button:hover{
+  color: #f14814;
+
+}
+.galery-button:focus{
+  color: #9b2f0e;
+  background-color: rgba(0, 0, 0, 0.3);
+outline: 3px solid rgba(0, 0, 0, 0.6);
+} 
+
+.galery-button.prev {
+  left: 1rem;
+}
+.galery-button.next {
+  right: 1rem;
+}
 
 @media (max-width: 1284px) {
   .hero-info {
     padding: 190px 30px 30px 30px;
   }
+  
 }
 
 @media (max-width: 1028px) {
@@ -332,6 +390,7 @@ th, td {
     flex-direction: column;
     gap: 30px;
   }
+ 
 }
 
 @media (max-width: 760px) {
@@ -353,6 +412,7 @@ th, td {
   .hero-info {
     padding: 50px;
   }
+  
 }
 
 /* ......................section ready................ */
