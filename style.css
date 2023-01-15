@@ -20,6 +20,7 @@ li {
 
 img {
   vertical-align: top;
+  
 }
 
 a {
@@ -304,32 +305,18 @@ th, td {
   color: #3f3b3d;
   transition: all 0.3s;
 }
-.hero-photos {
-  position: relative;
+.hero-galery {
+  max-height: 500px;
+  min-width:300px;
+  overflow: hidden;
 }
 
 .hero-img {
   width: 100%;
+  height:100%;
 }
 
-.squares {
-  display: flex;
-  gap: 5px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
-}
 
-.square {
-  width: 6px;
-  height: 6px;
-  background-color: rgba(255, 255, 255, 0.411);
-}
-
-.square-active {
-  background-color: #fff;
-}
 
 @media (max-width: 1284px) {
   .hero-info {
